@@ -75,9 +75,10 @@ class HandleController extends Controller
 
        //--------------------------------------------------------------
 
-       
-        $birth=$request->input('date');
+       //$birth=$request->input('date');
         $sector=$request->input('sector');
+        $district=$request->input('district');
+ 
 
         if($sector==""){
           
@@ -90,12 +91,13 @@ class HandleController extends Controller
 
 
   
-            $district=Sector::find($sector);
-           $sector_name= $district->name;
+           $district=District::find($district);
+           
+           $sector_name= $sector;
            $district_id= $district->id;
            $request->session()->put('$district_id',$district_id);
             
-           $dis_name= $district=$district->District->name;
+           $dis_name= $district->name;
            
            
         }
@@ -104,12 +106,13 @@ class HandleController extends Controller
 
      
         $request->session()->put('tel',$tel);
-        $request->session()->put('birth',$birth);
+       // $request->session()->put('birth',$birth);
            $request->session()->put('sector',$sector_name);
            $request->session()->put('district',$dis_name);
 
-   
-      
+         // echo $request->session()->get('district');
+
+        // echo  $request->session()->get('sector');
       
               
 

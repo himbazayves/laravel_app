@@ -86,7 +86,7 @@
 
     <center>
     
-        <p data-aos="fade-up" data-aos-delay="300"><a href="{{route('process.auth')}}" class="btn btn-primary py-3 px-5 btn-pill">  {{__('customlang.start')}}   </a></p>
+        <p data-aos="fade-up" data-aos-delay="300"><a href="/auth" class="btn btn-primary py-3 px-5 btn-pill">  {{__('customlang.start')}}   </a></p>
       
        
       </center>   

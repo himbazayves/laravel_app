@@ -73,7 +73,7 @@
             <div class="p-4 rounded bg-white why-choose-us-box">
                
             
-                <form method="post" action="{{route('handle.detail')}}">
+                <form  method="post" action="{{route('handle.detail')}}">
                     @csrf
     
                        
@@ -82,20 +82,40 @@
     
                     
                         <span id="error"></span>
-                        <table class="table  table-borderless " id="item_table">
-                         <tr>
-                          <th>{{__('customlang.d_name')}} </th>
-                          <th>{{__('customlang.d_email')}}</th>
-                          <th>{{__('customlang.d_phone')}}</th>
-                          <th><button type="button" name="add" class="btn btn-success btn-sm add"><i class="fa fa-plus"></i></button></th>
-                         </tr>
-                         <input placeholder="amazina" type="hidden" value="1" class="form-control form-control-sm" name="loop[]"/>
+                        <table class="table " id="item_table">
+
+
+                         
+                         
+
+                          <div class="form-group">
+                         
+                            <button type="button" name="add" class="btn btn-success btn-sm add"><i class="fa fa-plus"></i></button>
+                          </div>
+                         
+                        
+
+                         <input  type="hidden" value="1" name="loop[]"/>
+                      
+
+                         <div class="form-group">
+                         <input placeholder="{{__('customlang.d_name')}}" type="text" class="form-control " name="name[]"  /> 
+                         </div>
+
+              
+                         <div class="form-group">
+                         <input placeholder="{{__('customlang.d_email')}}" name="email[]" class="form-control " /></td>
+                        </div>
+
+                         <div class="form-group">
+                         <input type="text" placeholder="{{__('customlang.d_phone')}}" name="tel[]" class="form-control " />
+                        </div>
+
+
                        
-                         <td><input placeholder="Names" type="text" class="form-control form-control-sm" name="name[]"  /></td>
-                         <td><input placeholder="E-mail" name="email[]" class="form-control form-control-sm" /></td>
-                         <td><input type="text" placeholder="phone number" name="tel[]" class="form-control form-control-sm" /></td>
-    
-                        </table>
+                      
+                      
+                      </table>
                     
                         
                     

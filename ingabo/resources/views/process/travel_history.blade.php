@@ -81,7 +81,7 @@
 
 
 
-                <div data-aos="fade-up" data-aos-delay="100" >
+                <div>
 
                 <p>  <label   for="travel_history">{{__('customlang.t_p1')}} ?</label></p>
                     
@@ -92,13 +92,13 @@
                      
                     
                       <label>
-                      <input class="input" id="myCheck" onclick="myFunction()" value="1" name="travel_history" type="radio">
+                      <input class="input" id="myCheck" onclick="myFunction1()" value="1" name="travel_history" type="radio">
                         <span class="design"></span>
                         <span class="text">{{__('customlang.yes')}} </span>
                       </label>
                     
                       <label>
-                        <input class="input" value="0" onclick="myFunction()" id="unCheck" type="radio" name="travel_history" >
+                        <input class="input" value="0" id="unCheck" type="radio" name="travel_history" >
                         <span class="design"></span>
                         <span class="text">{{__('customlang.no')}} </span>
                       </label>
@@ -115,7 +115,7 @@
 
                  
 
-                    <div id="text" style="display:none; pading:20px" >
+                    <div class="light"  id="text" style="display:none;pading:20px" >
 
                         <hr>
 
@@ -397,7 +397,7 @@
                   
                        
                       
-                        <label class="text-dark" for="travel_history">{{__('customlang.t_p2')}} ?</label></p>
+                        <label class="text-dark" for="travel_history">{{__('customlang.t_p2')}} </label></p>
                     
                       
                        
@@ -418,7 +418,7 @@
 
                        <hr>
                         
-                        <label class="text-dark" for="travel_history">{{__('customlang.t_p3')}} ?</label></p>
+                        <label class="text-dark" for="travel_history">{{__('customlang.t_p3')}} </label></p>
                     
                       
                        
@@ -501,7 +501,6 @@
 
   
     
-
 
     
 

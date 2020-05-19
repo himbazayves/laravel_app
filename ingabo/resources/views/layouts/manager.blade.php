@@ -24,7 +24,7 @@
     <!-- Vendor CSS-->
     <link href="{{asset('vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
     <link href="{{asset('vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
-    <link href="{{asset('vendor/wow/animate.css" rel="stylesheet')}}" media="all">
+    
     <link href="{{asset('vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
     <link href="{{asset('vendor/slick/slick.css" rel="stylesheet')}}" media="all">
     <link href="{{asset('vendor/select2/select2.min.css" rel="stylesheet')}}" media="all">
@@ -33,6 +33,9 @@
 
     <!-- Main CSS-->
     <link href="{{asset('css/theme.css')}}" rel="stylesheet" media="all">
+
+
+   
 
 </head>
 
@@ -48,16 +51,25 @@
                     </div>
                    
 
-                    <a  href="{{ route('logout') }}">
-                  
-                     {{ __('Logout') }}
+                    <a  href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+           {{ __('Logout') }}
+
+
+                     
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                  </a>
                    
+
+
+
+
                 </div>
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a href="/manager.index" class="js-arrow" href="#">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard
                                 <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
@@ -382,7 +394,7 @@
     <!-- Vendor JS       -->
     <script src="{{asset('vendor/slick/slick.min.js')}}">
     </script>
-    <script src="{{asset('vendor/wow/wow.min.js')}}"></script>
+    
     <script src="{{asset('vendor/animsition/animsition.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
     </script>
@@ -399,17 +411,11 @@
     <script src="{{asset('vendor/vector-map/jquery.vmap.sampledata.js')}}"></script>
     <script src="{{asset('vendor/vector-map/jquery.vmap.world.js')}}"></script>
 
+    
+
     <!-- Main JS-->
-    <script src="{{asset('js/main.js')}}"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.14.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+    <script src="{{asset('vendor/js/main.js')}}"></script>
+  
 
 </body>
 

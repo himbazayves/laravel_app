@@ -35,6 +35,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/welcome','ProcessController@welcome')->name('process.welcome');
 Route::get('/notice','ProcessController@notice')->name('process.notice');
 Route::get('/auth','ProcessController@auth')->name('process.auth');
+Route::get('/getsector/{id}','ProcessController@sector')->name('getsector');
 
 
 

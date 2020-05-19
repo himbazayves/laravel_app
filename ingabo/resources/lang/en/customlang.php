@@ -118,8 +118,14 @@ can also be reported to medical proffesional ,or as follows:',
 'get_involved'=>'Get involved',
 
 'select_sector'=>'Select your sector .......',
+'select_district'=>'Select your district.......',
 
 
 'feedback'=>'Feedback',
+
+
+'home'=>'Home page',
+
+'or'=>'or',
 ];
 

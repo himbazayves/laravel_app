@@ -27,9 +27,10 @@ class ManagerController extends Controller
    function index(Request $request){
 
     $vistor_number = Vistor::all()->count();
+    $trial_number = Trial::all()->count();
 
 
-    return view('manager.index',compact('vistor_number'));
+    return view('manager.index',compact('vistor_number','trial_number'));
    }
 
 

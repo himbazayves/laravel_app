@@ -15,6 +15,19 @@ class ProcessController extends Controller
 
               return view('process.index');
              }
+
+
+             public function sector($id)
+             {
+                 //$userData['data'] = DB::table('sectors')
+                 $userData['data']= Sector::where('district_id', '=', $id)
+                
+                 ->orderBy('name', 'asc')
+                 ->get();
+             
+              echo json_encode($userData);
+              exit;
+             }
        
 
        function welcome(){
@@ -83,12 +96,13 @@ class ProcessController extends Controller
 
 
        $centers=Center::all();
+       $districts=District::all();
        
 
 
 
 
-       return view('process.center',['centers'=>$centers]);
+       return view('process.center',['centers'=>$centers,'districts'=>$districts]);
       
     }
 }

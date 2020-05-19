@@ -82,16 +82,24 @@
     
                         <div data-aos="fade-up" data-aos-delay="100" class="form-group">
 
-                        <label for="vat" class=" form-control-label">{{__('customlang.birth')}}</label>
+                          <label for="vat" class=" form-control-label">Akarere</label>
+                          <select  class="js-example-basic-single form-control{{ $errors->has('district') ? ' is-invalid' : '' }}" onchange="dropdown(this.value);" name="district" id="district" required>
+                              <option value="" disabled selected hidden>{{__('customlang.select_district')}}</option>
+                              @foreach ($districts as $value)
+                          <option value="{{ $value->id }}">{{ $value->name}}</option>
+                           @endforeach
+  
+                            </select>
+                      
+  
+                         
+                          </div>
 
-                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY"/>
-                       
-                        </div>
 
 
 
                         
-
+                        
 
 
 
@@ -99,12 +107,9 @@
                         <div data-aos="fade-up" data-aos-delay="100" class="form-group">
 
                             <label for="vat" class=" form-control-label">{{__('customlang.sector')}}</label>
-                            <select  class="js-example-basic-single form-control" name="sector" required>
+                            <select  class="js-example-basic-single form-control{{ $errors->has('sector') ? ' is-invalid' : '' }}" name="sector" id="sector" required>
                                 <option value="" disabled selected hidden>{{__('customlang.select_sector')}}</option>
-                                @foreach ($sectors as $value)
-                            <option value="{{ $value->id }}">{{ $value->name}}</option>
-                             @endforeach
-    
+                            
                               </select>
                         
     
@@ -168,11 +173,39 @@
 
     
 
-
-
+    <script >
+      function dropdown(msg){
+          var district=msg;
+          $.ajax({
+         url: 'getsector/'+district,
+         type: 'get',
+         dataType: 'json',
+         success: function(response){
+              $("#sector").empty(); 
+  
+           var len = 0;
+           if(response['data'] != null){
+             len = response['data'].length;
+           }
+           if(len > 0){
+             // Read data and create <option >
+             for(var i=0; i<len; i++){
+  
+               var id = response['data'][i].id;
+               var name = response['data'][i].name;
+  
+               var option = "<option value='"+name+"'>"+name+"</option>"; 
+  
+               $("#sector").append(option); 
+             }
+           }
+  
+         }
+      });
+      }
+ </script>
 
 
 
   
 @endsection
-

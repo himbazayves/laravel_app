@@ -50,17 +50,19 @@
                         <select id="mylist" onchange="myFunction()" class='form-control js-example-basic-single'>
                             <option value=""> {{__('customlang.select_here')}}</option>
                     
-                            @foreach($centers as $center)
-                        <option>{{$center->District->name}}</option>
+                            @foreach($districts as $district)
+                        <option>{{$district->name}}</option>
                         @endforeach   
                         </select> 
                      
-                            <table  class="table table-responsive"  id="myTable" >
+                            <table  class="table table-striped table-sm table-hover table-borderless"  id="myTable" >
                                 <thead>
                     <tr>
-                                    <th class="">Center name</th>
-                                    <th class="" >District</th>
-                                    <th class="" >Contact</th>
+                                   
+                                    <th >Center name</th>
+                                    <th >District</th>
+                                    <th >Contact</th>
+                                   
                                 
                            
                     </tr>        
@@ -69,9 +71,9 @@
                                     @foreach($centers as $center)
                                     <tr>
                                       
-                                        <td class="">{{$center->name}}</td>
-                                        <td class="">{{$center->District->name}}</td>
-                                        <td class="">{{$center->contact}}</td>
+                                        <td >{{$center->name}}</td>
+                                        <td >{{$center->District->name}}</td>
+                                        <td >{{$center->contact}}</td>
                                     </tr>
                                     
                                     @endforeach

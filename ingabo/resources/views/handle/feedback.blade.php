@@ -107,24 +107,36 @@
 
 
 
-                     <p> {{__('customlang.f_p')}} </p>
+                     <p> {{__('customlang.f_p')}} :</p>
 
 
-                     <p>  <h5><strong>Phone: 114</strong> </h5>
-                      <h5><strong>WhatsAPP: +250  788 202 080 </strong></h5>
-                      <h5><strong>E-mail: callcenter@rbc.gov.rw</strong></h5>
-                    
-                         <h5> Or </h5>
+                     <p>  
+                       <table>
+                         <tr>
+                      <td> <h5><strong>Phone:</strong></h5>  </td> <td> <h5><strong> 114</strong> </h5></td>
+
+                         </tr>
+                        <tr>
+                          <td><h5><strong>WhatsAPP: </strong></h5>  </td> <td> <h5><strong>+250  788 202 080 </strong> </h5></td>
+
+                        </tr>
+
+                        <tr>
+                          <td><h5><strong>E-mail: </strong></h5>  </td> <td> <h5><strong>callcenter@rbc.gov.rw</strong></h5></td>
+
+                        </tr>
+                       </table>
+                         <h5>{{__('customlang.or')}} </h5>
                         
-
-                         @foreach($center->centers as $value)
-                         <h5> 
+                         <table>
                          
-                          <strong> {{$value->name}} :{{$value->contact}} </strong>
-
-                         </h5>
-                    
+                         @foreach($center->centers as $value)
+                         <tr>
+                        <td> <h5><strong> {{$value->name}}  </h5></strong></td> <td><h5><strong> :{{$value->contact}} </strong></h5> </td>
+                        </tr>
+                        
                     @endforeach
+                  </table>
                     </p>
                     
 
@@ -161,7 +173,7 @@
 
     <center>
     
-        <p style="margin-top:10px" data-aos="fade-up" data-aos-delay="300"><a href="{{route('process.auth')}}" class="btn btn-success py-3 px-5 btn-pill">       {{__('customlang.restart')}}</a> <button type="submit" class="btn btn-primary py-3 px-5 btn-pill">     {{__('customlang.f_tips')}}   </button></p>
+        <p style="margin-top:10px"><a href="{{route('process.auth')}}" class="btn btn-success py-3 px-5 btn-pill">       {{__('customlang.restart')}}</a> <a href="/" class="btn btn-light py-3 px-5 btn-pill">       {{__('customlang.home')}}</a><button type="submit" class="btn btn-primary py-3 px-5 btn-pill">     {{__('customlang.f_tips')}}   </button></p>
       
        
       </center>   

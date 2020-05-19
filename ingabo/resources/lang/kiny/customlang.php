@@ -16,7 +16,7 @@ return [
     'powered_by' => 'Yakozwe na',
 
     'test_center' => 'Ibigo nderabuzima',
-    'test' => 'Ipime',
+    'test' => 'Isuzume',
     'test_content' => 'Hano wakora igerageza ryoroshye',
     
     'tips_title' =>'Inama',
@@ -66,11 +66,11 @@ Hitamo ibimenyetso byose waba ufite",
 
 
 't_title'=>"Subiza ibibazo bijyanye ningendo bikurikira",
-'t_p1'=>"Mwaba muheruka mu gihugu kirimo COVID-19 mu mezi 14 ashize ",
+'t_p1'=>" Muheruka mu gihugu kirimo COVID-19 mu mezi atatu ashize ",
 't_p2'=>"Mubo mwajyanye cg mwagarukanye haba hari umuntu muzi? ",
 
-'t_p3'=>"hari abo mubana? ",
-'t_country'=>"Shiramoicyo gihugu hano",
+'t_p3'=>"Hari abo mubana? ",
+'t_country'=>"Hitamo igihugu/ibihugu ....",
 
 'yes'=>"YEGO",
 'no'=>'OYA',
@@ -81,14 +81,14 @@ Hitamo ibimenyetso byose waba ufite",
 //---------------- CONTACT
 
 'C_title'=>"Ibijyanye nabo mwahuye",
-'C_head'=>"Subiza ibibazo bikurikira",
-'C_p1'=>"Hari umuntu mwaba mwarahuye ufite ibimetso bya corona virus cg uyirwaye ",
+'c_head'=>"Subiza ibibazo bikurikira bijyanye nabo mwahuye",
+'c_p1'=>"Hari umuntu mwaba mwarahuye ufite ibimetso bya corona virus cg uyirwaye ",
 //details
 
 
 'd_title'=>"Amakuru y'ingenzi",
 
-'d_head'=>"Mu rwego rwo kurwanya ikwirakwira ry'icyorezo , mubishaka mwaduha imyirondoro yabo mwajyanye cg mwazanye muzi ubwo mu heruka mu mahanga.",
+'d_head'=>"Mu rwego rwo kurwanya ikwirakwira ry'icyorezo ,  mwaduha imyirondoro yabo mwajyanye cg mwazanye muzi ubwo mu heruka mu mahanga.",
 'd_email'=>'Imeli',
 'd_name'=>'Amazina',
 'd_phone'=>'Numero ya telephone',
@@ -97,7 +97,7 @@ Hitamo ibimenyetso byose waba ufite",
 
 'f_title'=>"Ibisubizo",
 'f_normal'=>"Ntakibazo ufite",
-'f_severe'=>"Wihutire kujya kwa muganga",
+'f_severe'=>"Wihutire guhamagara imwe muri numero ziri hasi hano",
 'f_center'=>"Ikigo",
 'f_contact'=>"Telefone",
 'restart'=>'Tangira',
@@ -108,7 +108,7 @@ wabimenyesha ababishinzwe ku miromgo ikurikira',
 
 
 
-'back'=>'Zubira inyumba',
+'back'=>'Subira inyuma',
 
 
 'select_here'=>'Shaka akarere hano ................',
@@ -119,6 +119,10 @@ wabimenyesha ababishinzwe ku miromgo ikurikira',
 'get_involved'=>'Itabire',
 
 'select_sector'=>'Hitamo umurenge .......',
+'select_district'=>'Hitamo akarere .......',
 'feedback'=>'Ibisubizo',
 
+'home'=>'Ahabanza',
+
+'or'=>'Cg se',
 ];

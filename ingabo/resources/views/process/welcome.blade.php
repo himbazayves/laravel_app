@@ -69,7 +69,7 @@
 
 <center>
     
-    <p style="margin-top:10px" data-aos="fade-up" data-aos-delay="300"><button type="submit" class="btn btn-primary py-3 px-5 btn-pill">  <i class="fa fa-location-arrow"></i> &nbsp; Komeza-continue-proceed</button></p>
+    <p style="margin-top:10px" data-aos="fade-up" data-aos-delay="300"><button type="submit" class="btn btn-primary py-3 px-5 btn-pill">  <i class="fa fa-location-arrow"></i> &nbsp; Komeza-Continue-Procéder</button></p>
   
    
   </center>   
